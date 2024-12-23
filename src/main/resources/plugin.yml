@@ -1,0 +1,13 @@
+name: TheBridge
+version: '${version}'
+main: me.kajias.thebridge.TheBridge
+prefix: TheBridge/AnixitServer
+author: KAJIAS
+description: TheBridge mini game
+commands:
+  tb:
+    description: Main plugin command.
+  thebridge:
+    description: Main plugin command.
+  leave:
+    description: Leave game command.

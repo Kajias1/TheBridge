@@ -1,0 +1,194 @@
+game-config:
+  start-countdown: 10
+  long-start-countdown: 30
+  game-duration: 600
+  rounds: 5
+  next-round-start-countdown: 3
+  double-jump-cool-down-ticks: 110
+  double-jump-multiplier: 0.3
+  time-back-item-drop-chance: 2
+  time-back-item-block-radius: 27
+  teleport-to-base-item-drop-period: 17
+  teleport-to-base-item-drop-chance: 3
+  arrow-drop-period: 5
+  arrow-max-per-player: 3
+  golden-apple-drop-chance: 2
+  golden-apple-max-amount: 10
+  main-block-material: STAINED_CLAY
+  bonus-rewards:
+    SOLO:
+      kills: 4
+      victory: 1
+    DUO:
+      kills: 5
+      victory: 2
+    TRIO:
+      kills: 5
+      reward: 2
+    QUAD:
+      kills: 6
+      reward: 2
+    ONE_X_FOUR:
+      kills: 7
+      reward: 2
+    TWO_X_FOUR:
+      kills: 8
+      reward: 3
+      reward-for-place-by-goals: [ 1, 2, 3 ]
+messages:
+  log:
+    prefix: '[TheBridge] '
+    no-lobby: 'Локация лобби не была установлена'
+    config-reloaded: 'Конфигурации перезагружены'
+    must-be-player-to-execute-command: 'Эту команду могут использовать только игроки'
+    arena-loaded-successfully: '&aАрена %arena% &aбыла загружена успешно'
+    arena-load-failed: '&cНе удалось загрузить арену %arena%'
+    arena-was-not-setup-properly: '&cНе удалось загрузить арену %arena% &cиз-за неправильной настройки'
+  prefix: '&6&lTheBridge &8► &7'
+  admin-help:
+    - '&6&lTheBridge &7 Команды для админов'
+    - '&6&m---------------------------------------'
+    - ''
+    - '&e/tb setlobby &f- Установить точку появления игроков в лобби'
+    - '&e/tb create <Название арены> <Название шаблона мира> &f- Создать арену из существующего мира'
+    - '&e/tb disable <Название арены> &f- Отключить арену'
+    - '&e/tb enable <Название арены> &f- Включить арену'
+    - '&e/tb setup <Название арены> &f- Перейти в настройку арены'
+    - '&e/tb remove <Название арены> &f- Удалить арену из загруженных арен'
+    - '&e/tb list &f- Список текущих арен'
+    - ''
+    - '&6&m---------------------------------------'
+  xyz: '(&eX: &3%x%&7, &eY: &3%y%&7, &eZ: &3%z%&7)'
+  start-countdown: '&7Игра начнётся через &e%time% &7сек.'
+  next-round-start:
+    scored-player: '%player_name% забивает гол!'
+    scored-player-to-team:
+      red: '%player_name% &fкрадёт ♥ у &cкрасных!'
+      blue: '%player_name% &fкрадёт ♥ у &9синих!'
+      green: '%player_name% &fкрадёт ♥ у &aзелёных!'
+      yellow: '%player_name% &fкрадёт ♥ у &eжёлтых!'
+    countdown: '&e%time%'
+  lobby-was-not-set: '&7Локация лобби не была установлена, телепортирую вас в обычный мир'
+  lobby-was-set: '&aЛокация лобби установлена'
+  arena-created: '&eАрена %arena_name% успешно создана! Переходим в режим настройки арены...'
+  arena-exists: '&7Арена %arena_name% уже существует'
+  arena-does-not-exist: '&7Арены %arena_name% не существует'
+  template-world-not-found: '&7Мира с именем %world_name% не существует'
+  not-in-arena-world: '&7Вы не находитесь в мире арены'
+  arena-not-in-setup: '&7Данная арена не находится в режиме настройки'
+  arena-is-already-in-setup: '&7Арена уже находится в режиме настройки'
+  arena-type-unknown: '&7Неизвестный тип арены'
+  arena-has-been-disabled: '&aАрена %arena_name% успешно отключена'
+  no-selected-region: '&7Сначала выделите регион'
+  selection-1-message: '&7точка 1 (%x%, %y%, %z%)'
+  selection-2-message: '&7точка 2 (%x%, %y%, %z%)'
+  region-added: '&7Регион добавлен'
+  regions-cleared: '&7Регионы очищены'
+  failed-to-disable-arena: '&7Не удалось отключить арену %arena_name%'
+  arena-has-been-enabled: '&aАрена %arena_name% включена'
+  arena-is-enabled: '&7Арена %arena_name% уже включена'
+  arena-name-is-not-specified: '&7Не указано имя арены'
+  must-exit-from-arena-to-remove: '&7Для удаления нужно выйти из мира арены'
+  arena-removed-successfully: '&aАрена была удалена'
+  entering-setup: '&eПереходим в режим настройки арены...'
+  spawn-point-waiting: '&7Точка ожидания игроков'
+  exiting-setup: '&aНастройка арены завершена!'
+  failed-to-finish-setup: '&7Арена не была настроена правильно'
+  unknown-subcommand: '&7Неизвестный аргумент команды'
+  no-permission: '&7Не хватает прав для выполнения команды'
+  arena-list-format:
+    arena-list-empty: '&7В настоящий момент нет созданных арен'
+    arena-states:
+      setup: '&eВ режиме настройки'
+      disabled: '&cВыключена'
+      waiting: '&aОжидание игроков'
+      starting: '&aСтарт'
+      started: '&8Идёт игра'
+      ending: '&8Завершение игры'
+    arena: '%name%  &7|&f  %world%  &f&7|&f  %state%'
+  no-available-arenas: '&7Нет свободной арены'
+  arena-is-full: '&7Арена заполнена'
+  not-in-game: '&7Вы не в игре'
+  arena-has-been-started: '&7Игра на арене уже началась'
+  joined-team:
+    red: '&7Вы присоеденились к команде &cкрасных'
+    blue: '&7Вы присоеденились к команде &9синих'
+    green: '&7Вы присоеденились к команде &aзелёных'
+    yellow: '&7Вы присоеденились к команде &eжёлтых'
+  team-is-full: '&7Команда заполнена'
+  player-joined: '&a%player% &7присоединился к игре (&e%current%&8/&e%max%&7)'
+  game-type:
+    scores: 'Обычный'
+    lives: 'TheBridge X'
+    none: 'Не установлен'
+  player-left: '&c%player% &7вышел из игры (&e%current%&8/&e%max%&7)'
+  player-left-in-game: '&7%player% &7покинул игру.'
+  no-players-left: '&7В игре не осталось игроков. Игра была аннулирована, телепортирую Вас в лобби...'
+  no-commands-in-game: '&7Невозможно выполнить команду во время игры'
+  cant-jump-to-own-portal: '&7Нельзя прыгать в свой портал'
+  time-back-item-drop-message: '&6Бонусный предмент за убийство - &e&lВремя вспять!'
+  golden-apple-drop-message: '&6Бонусный предмент за убийство - &6&lЗолотое яблоко!'
+  teleport-to-base-item-drop-message: '&6Вам выпал бонусный предмент - &5&lТелепорт на базу!'
+  lightning-stick-strike-message: '%player_name% &6ударил со всей силы молнией по %victim_name%&6!'
+  cant-use-time-back-on-enemy-base: '&cНельзя использовать &e&lВремя вспять &cна чужой базе!'
+  fast-start-used: '&e%player_name% использовал быстрый старт!'
+  draw-title: ' &7НИЧЬЯ!'
+  defeat-title: ' &cВЫ ПРОИГРАЛИ'
+  time-back: '&5&lТелепорт назад через: &f%time% &5&lсек.'
+  game-end-title:
+    team-color:
+      red: '  &c&lКРАСНАЯ &6&lКоманда победила!'
+      blue: '  &9&lСИНЯЯ &6&lКоманда победила!'
+      green: '  &a&lЗЕЛЁНАЯ &6&lКоманда победила!'
+      yellow: '  &e&lЖЁЛТАЯ &6&lКоманда победила!'
+    scores-subtitle: ' &c%red% &8- &9%blue%'
+    lives-subtitle: ' %winner_team_lives%'
+  game-end-bonus-reward-message: '&3&lБонусы за победу &6&l+%bonus%'
+  game-end-goals-top:
+    - ''
+    - '           &c&l| ТОП ГОЛОВ ЗА МАТЧ |'
+    - ''
+    - '  &5&l1 МЕСТО&8: &f%top_1_player% &8» &fЗабито голов: &f%top_1_player_goals%'
+    - '  &6&l2 МЕСТО&8: &f%top_2_player% &8» &fЗабито голов: &f%top_2_player_goals%'
+    - '  &4&l3 МЕСТО&8: &f%top_3_player% &8» &fЗабито голов: &f%top_3_player_goals%'
+    - ''
+  team-eliminated-message:
+    red: '&c&lКРАСНАЯ &c&lКоманда уничтожена!'
+    blue: '&9&lСИНЯЯ &c&lКоманда уничтожена!'
+    green: '&a&lЗЕЛЁНАЯ &c&lКоманда уничтожена!'
+    yellow: '&e&lЖЁЛТАЯ &c&lКоманда уничтожена!'
+  team-scores-format:
+    team-colors:
+      red: '&c'
+      blue: '&9'
+      green: '&a'
+      yellow: '&e'
+      none: '&7'
+    scores: '⬤'
+    lives: '❤'
+    your-team: ' &6(Вы)'
+  game-rounds-format: '&6%current_round%&f/&6%max_rounds%'
+  game-round-start-title: '&c&lПоехали!'
+  death-messages:
+    player-fell-into-void: '%player_name% &7упал в бездну'
+    player-kicked-into-void-by-player: '%player_name% &7был столкнут в бездну игроком %killer_name%'
+    player-killed-by-player: '%player_name% &7был убит игроком %killer_name%'
+    player-kicked-to-ground-by-player: '%player_name% &7был скинут с большой высоты игроком %killer_name%'
+    player-hit-ground: '%player_name% &7упал с большой высоты'
+  pickaxe-selected: '&aКирка выбрана'
+  game-chat-format:
+    default: '&f%s &8→ &7%s'
+    team: '%team_color%&l[Команде] &r&f%s &8→ &7%s'
+    global: '%team_color%&l[Всем] &r&f%s &8→ &7%s'
+  insufficient-money: '&cНедостаточно средств'
+  bonus-purchase-successful: '&6Буст куплен!'
+  color-purchase-successful: '&6Цвет куплен!'
+  item-was-already-bought: '&aУ вас уже в наличии этот предмет'
+  color-selected: '&aЦвет выбран!'
+  no-colors-bought-yet: '&cУ вас нет в наличии цветов для данной опции'
+  cant-move-to-blocked-list-all-colors: '&cУ вас должен быть минимум 1 используемый цвет'
+  cant-place-near-portals: '&cНельзя ставить блоки рядом с порталами'
+  cant-place-block-here: '&cЗдесь нельзя ставить блоки'
+  block-color-type:
+    random-block-color-type-selected: '&6Выбран рандомный выбор цветов'
+    rainbow-block-color-type-selected: '&6Выбран переливающийся выбор цветов'

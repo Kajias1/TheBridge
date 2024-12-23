@@ -1,0 +1,708 @@
+menus:
+  arena-configuration:
+    title: '&7Настройка арены'
+    size: 18
+    items:
+      set-waiting-spawn-location:
+        material: COMPASS
+        data: 0
+        name: '&6Точка ожидания игроков'
+        lore:
+          - ''
+          - '&fТочка спавна где будут появляться игроки'
+          - '&fпри кодключении к данной арене'
+          - ''
+        slot: 1
+      set-arena-type:
+        material: PAPER
+        data: 0
+        name: '&6Тип арены'
+        lore:
+          - ''
+          - '&fДоступны следующие типы арены:'
+          - '&fSOLO(1v1), DUO(2v2), TRIO(3v3), QUADRO(4v4),'
+          - '&fONE_X_FOUR(1v1v1v1), TWO_X_FOUR(2v2v2v2)'
+        slot: 2
+      set-game-type:
+        material: PAPER
+        data: 0
+        name: '&6Тип игры'
+        lore:
+          - ''
+          - '&fДоступны следующие типы игры:'
+          - '&f - SCORES (Очки)'
+          - '&f - LIVES (Жизни)'
+          - ''
+        slot: 3
+      finish-setup:
+        material: BLAZE_POWDER
+        data: 0
+        name: '&6Завершить настройку арены'
+        lore:
+          - ''
+          - '&fЗавершить настройку арены'
+          - '&f(Убедитесь что арена настроена правильно)'
+          - ''
+        slot: 9
+    team-configuration-items:
+      set-red-spawn-location-first:
+        material: STAINED_CLAY
+        data: 14
+        name: '&cТочка спавна игроков красной команды'
+        lore:
+          - ''
+          - '&fТочка где будут появляться игроки'
+          - '&cкрасной &fкоманды при старте игры'
+          - ''
+        slot: 4
+        is-first: true
+        team: RED
+      set-blue-spawn-location-first:
+        material: STAINED_CLAY
+        data: 11
+        name: '&9Точка спавна игроков синей команды'
+        lore:
+          - ''
+          - '&fТочка где будут появляться игроки'
+          - '&9синей &fкоманды при старте игры'
+          - ''
+        slot: 5
+        is-first: true
+        team: BLUE
+      set-green-spawn-location-first:
+        material: STAINED_CLAY
+        data: 5
+        name: '&aТочка спавна игроков зелёной команды'
+        lore:
+          - ''
+          - '&fТочка где будут появляться игроки'
+          - '&aзелёной &fкоманды при старте игры'
+          - ''
+        slot: 6
+        is-first: true
+        team: GREEN
+      set-yellow-spawn-location-first:
+        material: STAINED_CLAY
+        data: 4
+        name: '&eТочка спавна игроков жёлтой команды'
+        lore:
+          - ''
+          - '&fТочка где будут появляться игроки'
+          - '&eжёлтой &fкоманды при старте игры'
+          - ''
+        slot: 7
+        is-first: true
+        team: YELLOW
+      set-red-spawn-location-second:
+        material: STAINED_CLAY
+        data: 14
+        name: '&cТочка респавна игроков красной команды'
+        lore:
+          - ''
+          - '&fТочка где будут появляться игроки'
+          - '&cкрасной &fкоманды после смерти'
+          - ''
+        slot: 13
+        is-first: false
+        team: RED
+      set-blue-spawn-location-second:
+        material: STAINED_CLAY
+        data: 11
+        name: '&9Точка респавна игроков синей команды'
+        lore:
+          - ''
+          - '&fТочка где будут появляться игроки'
+          - '&9синей &fкоманды после смерти'
+          - ''
+        slot: 14
+        is-first: false
+        team: BLUE
+      set-green-spawn-location-second:
+        material: STAINED_CLAY
+        data: 5
+        name: '&aТочка спавна игроков зелёной команды'
+        lore:
+          - ''
+          - '&fТочка где будут появляться игроки'
+          - '&aзелёной &fкоманды после смерти'
+          - ''
+        slot: 15
+        is-first: false
+        team: GREEN
+      set-yellow-spawn-location-second:
+        material: STAINED_CLAY
+        data: 4
+        name: '&eТочка спавна игроков жёлтой команды'
+        lore:
+          - ''
+          - '&fТочка где будут появляться игроки'
+          - '&eжёлтой &fкоманды после смерти'
+          - ''
+        slot: 16
+        is-first: false
+        team: YELLOW
+  arena-type-selection:
+    title: '&7Выбор типа арены'
+    size: 9
+    arena-type-button:
+      material: STAINED_CLAY
+      name: '&6Выбрать тип арены - &f%type% &6(ПКМ)'
+  game-type-selection:
+    title: '&7Выбор типа игры'
+    size: 9
+    arena-type-button:
+      material: STAINED_CLAY
+      name: '&6Выбрать тип игры - &f%type% &6(ПКМ)'
+  team-select:
+    title: '&8Выбор команды'
+    size: 27
+    items:
+      red:
+        material: STAINED_CLAY
+        data: 14
+        name: '&cКрасная команда [%players_now%/%players_max%]'
+        slot: 13
+      blue:
+        material: STAINED_CLAY
+        data: 11
+        name: '&9Синяя команда [%players_now%/%players_max%]'
+        slot: 15
+      green:
+        material: STAINED_CLAY
+        data: 5
+        name: '&aЗелёная команда [%players_now%/%players_max%]'
+        slot: 11
+      yellow:
+        material: STAINED_CLAY
+        data: 4
+        name: '&eЖёлтая команда [%players_now%/%players_max%]'
+        slot: 17
+    team-select-button-lore:
+      empty:
+        - '&7В данной команде пока нет игроков'
+      has-players:
+        - ''
+        - '&7Игроки:'
+    player-list-row: ' &7» %player_name%'
+  item-purchase:
+    title: '&8Покупка'
+    size: 27
+    item-description-format:
+      both-prices:
+        - ''
+        - '&fЦена: &5&l%price_anix% Аниксов %benefit%'
+        - '&fЦена: &6&l%price_bonus% Бонусов'
+        - ''
+        - '&fСрок(дни): %color%%period%'
+        - ''
+        - '&6» &fКупить за &5&lАниксы &f(&lЛКМ&f) &6«'
+        - '&6» &fКупить за &6&lБонусы &f(&lПКМ&f) &6«'
+        - ''
+      anix-prices:
+        - ''
+        - '&fЦена: &5&l%price_anix% Аниксов %benefit%'
+        - ''
+        - '&fСрок(дни): %color%%period%'
+        - ''
+        - '&6» &fКупить за &5&lАниксы &f(&lЛКМ&f) &6«'
+        - ''
+      colors:
+        - '&b&l'
+        - '&9&l'
+        - '&a&l'
+        - '&4&l'
+        - '&6&l'
+        - '&5&l'
+  bonus-shop:
+    title: '&7Магазин бонусов'
+    size: 45
+    filler-items:
+      red:
+        material: STAINED_GLASS_PANE
+        data: 14
+        slots: [ 27 ]
+      blue:
+        material: STAINED_GLASS_PANE
+        data: 11
+        slots: [ 19 ]
+      black:
+        material: STAINED_GLASS_PANE
+        data: 15
+        slots: [ 1, 2, 8, 9, 10, 18, 28, 36, 37, 38, 44, 45 ]
+    block-custom-color:
+      material: STAINED_CLAY
+      name: '&6&lВыбрать цвет блоков'
+      lore:
+        - ''
+        - '&6&lПосле покупки ваши блоки будут'
+        - '&6&lпокрашены в собственный цвет'
+        - ''
+      slot: 32
+    custom-pickaxe:
+      material: DIAMOND_PICKAXE
+      name: '&6&lКастомизация кирки'
+      lore:
+        - ''
+        - '&6&lВы сможете выбрать любой'
+        - '&6&lтип кирки вместо обычной'
+        - ''
+      slot: 5
+    items:
+      fast-pickaxe:
+        material: DIAMOND_PICKAXE
+        name: '&b&lБыстрая кирка'
+        lore:
+          - ''
+          - '&b&lПосле покупки ваша кирка'
+          - '&b&lначнёт копать блоки быстрее'
+          - ''
+        enchanted: true
+        slot: 14
+        prices:
+          anix: [ 19, 29, 49, 66, 99, 149 ]
+          bonus: [ 49, 69, 169, 189, 339 ]
+          benefit:
+            - '&6« &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+            - '&6« &b&lВЫГОДА 25% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &9&lВЫГОДА 30%'
+            - '&6« &4&lВЫГОДА 44% &4&l+ &a&lСКИДКА ДЛЯ БОНУСОВ 3%'
+            - '&6« &6&lВЫГОДА 52%'
+            - '&6« &5&lВЫГОДА 64%'
+      double-jump:
+        material: RABBIT_FOOT
+        name: '&a&lДвойной прыжок'
+        lore:
+          - ''
+          - '&a&lДвойной прыжок добавляет'
+          - '&a&lпреимущество в передвижении'
+          - ''
+        enchanted: false
+        slot: 22
+        prices:
+          anix: [ 39, 69, 117, 149, 229, 289 ]
+          bonus: [ 117, 189, 369, 479, 739 ]
+          benefit:
+            - '&6« &5&lСКИДКА ДЛЯ БОНУСОВ 17%'
+            - '&6« &b&lВЫГОДА 15% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &9&lВЫГОДА 25%'
+            - '&6« &4&lВЫГОДА 37%'
+            - '&6« &6&lВЫГОДА 52%'
+            - '&6« &5&lВЫГОДА 64%'
+      teleport-to-base:
+        material: EYE_OF_ENDER
+        name: '&5&lТелепорт на базу'
+        lore:
+          - ''
+          - '&5&lСпециальный гаджет, который'
+          - '&5&lвозвращает вас на базу и'
+          - '&5&lвосстанавливает всё здоровье'
+          - ''
+        enchanted: false
+        slot: 23
+        prices:
+          anix: [ 29, 49, 85, 109, 169, 239 ]
+          bonus: [ 79, 129, 237, 339, 549 ]
+          benefit:
+            - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &b&lВЫГОДА 17% &4&l+ &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+            - '&6« &9&lВЫГОДА 33%'
+            - '&6« &4&lВЫГОДА 44%'
+            - '&6« &6&lВЫГОДА 55%'
+            - '&6« &5&lВЫГОДА 67%'
+      time-back:
+        material: WATCH
+        name: '&e&lВремя вспять'
+        lore:
+          - ''
+          - '&e&lНажав на этот предмет, вы фиксируете своё местоположение, и'
+          - '&e&lчерез 3 секунды, независимо от вашего текущего положения,'
+          - '&e&lвы телепортируетесь обратно в зафиксированное место. Кроме'
+          - '&e&lтого, ваше здоровье полностью восстанавливается.'
+          - ''
+        enchanted: false
+        slot: 24
+        prices:
+          anix: [ 29, 49, 79, 99, 149, 229 ]
+          bonus: [ 79, 129, 237, 329, 489 ]
+          benefit:
+            - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &b&lВЫГОДА 17% &4&l+ &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+            - '&6« &9&lВЫГОДА 33%'
+            - '&6« &4&lВЫГОДА 44%'
+            - '&6« &6&lВЫГОДА 55%'
+            - '&6« &5&lВЫГОДА 66%'
+      lightning-stick:
+        material: BLAZE_ROD
+        name: '&e&lКЧАУ'
+        lore:
+          - ''
+          - '&e&lНажав на предмет, вы призываете Зевса, который'
+          - '&e&lбьет противника молнией, а также оглушает его.'
+          - ''
+        enchanted: false
+        slot: 41
+        prices:
+          anix: [ 29, 49, 79, 99, 149, 229 ]
+          bonus: [ 79, 129, 237, 329, 489 ]
+          benefit:
+            - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &b&lВЫГОДА 17% &4&l+ &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+            - '&6« &9&lВЫГОДА 33%'
+            - '&6« &4&lВЫГОДА 44%'
+            - '&6« &6&lВЫГОДА 55%'
+            - '&6« &5&lВЫГОДА 66%'
+  arena-select:
+    title: '&7Выбор арены'
+    size: 36
+    slots: [ 10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25 ]
+    display-name: '&7%arena_name%'
+    material: STAINED_CLAY
+    lore:
+      - ''
+      - '&7Игроки: &a%arena_players%/%arena_players_total%'
+      - '&7Режим: &a%arena_type%'
+      - '&7Тип: &a%game_type%'
+      - '&7Карта: &a%arena_name%'
+      - '&7Статус: &aОжидание...'
+      - ''
+  block-color-shop:
+    title: '&7&lПокупка цвета'
+    size: 54
+    material: 'STAINED_CLAY'
+    random-color-toggle:
+      player-skull-id: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmMyNzEwNTI3MTllZjY0MDc5ZWU4YzE0OTg5NTEyMzhhNzRkYWM0YzI3Yjk1NjQwZGI2ZmJkZGMyZDZiNWI2ZSJ9fX0='
+      slot: 38
+      name: '&6&l Случайный цвет'
+      lore:
+        - ''
+        - '&f&l В каждой новой игре у вас будет'
+        - '&f&l случайный цвет ваших блоков'
+        - '&7&l (Цвета которые есть у Вас в наличии)'
+        - ''
+      prices:
+        anix: [ 25, 39, 59, 79, 119, 179 ]
+        bonus: [ 69, 139, 199, 279, 429 ]
+        benefit:
+          - '&6« &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+          - '&6« &b&lВЫГОДА 25% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+          - '&6« &9&lВЫГОДА 30%'
+          - '&6« &4&lВЫГОДА 40% &4&l+ &a&lСКИДКА ДЛЯ БОНУСОВ 3%'
+          - '&6« &6&lВЫГОДА 57%'
+          - '&6« &5&lВЫГОДА 67%'
+    rainbow-color-toggle:
+      player-skull-id: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY5ZTNlNmU1YjJiOTJmMGJlYjM2OGI3MzhiOTkzZDdiYTIyNWJmOWJiMjc1OGJmYzlmYzJkYWJhNGE1YTdkIn19fQ=='
+      slot: 40
+      name: '&6&l Переливающийся цвет'
+      lore:
+        - ''
+        - '&f&l В каждой новой игре у вас будет'
+        - '&f&l переливающийся цвет ваших блоков'
+        - '&7&l (Цвета которые есть у Вас в наличии)'
+        - ''
+      prices:
+        anix: [ 39, 59, 89, 119, 189, 289 ]
+        bonus: [ 99, 189, 299, 492, 639 ]
+        benefit:
+          - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 9%'
+          - '&6« &b&lВЫГОДА 22%'
+          - '&6« &9&lВЫГОДА 41%'
+          - '&6« &4&lВЫГОДА 47% &4&l+ &a&lСКИДКА ДЛЯ БОНУСОВ 1%'
+          - '&6« &6&lВЫГОДА 57%'
+          - '&6« &5&lВЫГОДА 69%'
+    color-block-list-menu-button:
+      material: 'PAPER'
+      slot: 42
+      name: '&6&lНастроить показываемые цвета'
+      lore:
+        - ''
+        - '&f&lВы можете поместить ненужные вам цвета в'
+        - '&f&lчёрный список чтобы они не использовались'
+        - ''
+    colors:
+      orange:
+        data: 1
+        slot: 10
+        prices:
+          anix: [ 29, 49, 79, 99, 149, 229 ]
+          bonus: [ 89, 149, 237, 299, 499 ]
+          benefit:
+            - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 8%'
+            - '&6« &b&lВЫГОДА 22%'
+            - '&6« &9&lВЫГОДА 41%'
+            - '&6« &4&lВЫГОДА 47%'
+            - '&6« &6&lВЫГОДА 57%'
+            - '&6« &5&lВЫГОДА 59%'
+      magenta:
+        data: 2
+        slot: 11
+        prices:
+          anix: [ 25, 39, 49, 79, 139, 199 ]
+          bonus: [ 79, 117, 149, 237, 417 ]
+          benefit:
+            - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 8%'
+            - '&6« &b&lВЫГОДА 22%'
+            - '&6« &9&lВЫГОДА 41%'
+            - '&6« &4&lВЫГОДА 47%'
+            - '&6« &6&lВЫГОДА 63%'
+            - '&6« &5&lВЫГОДА 75%'
+      aqua:
+        data: 3
+        slot: 12
+        prices:
+          anix: [ 39, 69, 99, 139, 219, 219 ]
+          bonus: [ 117, 199, 299, 417, 649 ]
+          benefit:
+            - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 8%'
+            - '&6« &b&lВЫГОДА 22%'
+            - '&6« &9&lВЫГОДА 41%'
+            - '&6« &4&lВЫГОДА 47%'
+            - '&6« &6&lВЫГОДА 57%'
+            - '&6« &5&lВЫГОДА 69%'
+      yellow:
+        data: 4
+        slot: 13
+        prices:
+          anix: [ 39, 69, 99, 139, 229, 339 ]
+          bonus: [ 117, 199, 299, 417, 689 ]
+          benefit:
+            - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 8%'
+            - '&6« &b&lВЫГОДА 22%'
+            - '&6« &9&lВЫГОДА 41%'
+            - '&6« &4&lВЫГОДА 47%'
+            - '&6« &6&lВЫГОДА 57%'
+            - '&6« &5&lВЫГОДА 69%'
+      lime:
+        data: 5
+        slot: 14
+        prices:
+          anix: [ 35, 59, 89, 139, 219, 329 ]
+          bonus: [ 101, 177, 269, 417, 649 ]
+          benefit:
+            - '&6« &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+            - '&6« &b&lВЫГОДА 25% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &9&lВЫГОДА 35%'
+            - '&6« &4&lВЫГОДА 40% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &6&lВЫГОДА 62%'
+            - '&6« &5&lВЫГОДА 70%'
+      pink:
+        data: 6
+        slot: 15
+        prices:
+          anix: [ 39, 59, 99, 159, 229, 339 ]
+          bonus: [ 117, 177, 299, 479, 689 ]
+          benefit:
+            - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 8%'
+            - '&6« &b&lВЫГОДА 22%'
+            - '&6« &9&lВЫГОДА 41%'
+            - '&6« &4&lВЫГОДА 47%'
+            - '&6« &6&lВЫГОДА 57%'
+            - '&6« &5&lВЫГОДА 69%'
+      light-gray:
+        data: 8
+        slot: 16
+        prices:
+          anix: [ 25, 39, 69, 89, 139, 199 ]
+          bonus: [ 79, 117, 199, 269, 417 ]
+          benefit:
+            - '&6« &6&lСКИДКА ДЛЯ БОНУСОВ 13%'
+            - '&6« &b&lВЫГОДА 17% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 8%'
+            - '&6« &9&lВЫГОДА 35%'
+            - '&6« &4&lВЫГОДА 45%'
+            - '&6« &6&lВЫГОДА 55%'
+            - '&6« &5&lВЫГОДА 68%'
+      cyan:
+        data: 9
+        slot: 19
+        prices:
+          anix: [ 25, 49, 79, 109, 169, 249 ]
+          bonus: [ 89, 149, 237, 329, 499 ]
+          benefit:
+            - '&6« &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+            - '&6« &b&lВЫГОДА 25% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &9&lВЫГОДА 35%'
+            - '&6« &4&lВЫГОДА 40% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &6&lВЫГОДА 63%'
+            - '&6« &5&lВЫГОДА 72%'
+      purple:
+        data: 10
+        slot: 20
+        prices:
+          anix: [ 44, 69, 119, 149, 239, 359 ]
+          bonus: [ 129, 199, 349, 449, 717 ]
+          benefit:
+            - '&6« &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+            - '&6« &b&lВЫГОДА 25% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &9&lВЫГОДА 35%'
+            - '&6« &4&lВЫГОДА 40% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &6&lВЫГОДА 62%'
+            - '&6« &5&lВЫГОДА 70%'
+      blue:
+        data: 11
+        slot: 21
+        prices:
+          anix: [ 39, 59, 99, 139, 209, 329 ]
+          bonus: [ 117, 177, 299, 417, 629 ]
+          benefit:
+            - '&6« &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+            - '&6« &b&lВЫГОДА 25% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &9&lВЫГОДА 35%'
+            - '&6« &4&lВЫГОДА 40% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &6&lВЫГОДА 62%'
+            - '&6« &5&lВЫГОДА 70%'
+      brown:
+        data: 12
+        slot: 22
+        prices:
+          anix: [ 25, 39, 59, 99, 149, 229 ]
+          bonus: [ 79, 117, 177, 299, 449 ]
+          benefit:
+            - '&6« &6&lСКИДКА ДЛЯ БОНУСОВ 13%'
+            - '&6« &b&lВЫГОДА 17% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 8%'
+            - '&6« &9&lВЫГОДА 35%'
+            - '&6« &4&lВЫГОДА 45%'
+            - '&6« &6&lВЫГОДА 55%'
+            - '&6« &5&lВЫГОДА 68%'
+      green:
+        data: 13
+        slot: 23
+        prices:
+          anix: [ 29, 49, 79, 109, 169, 249 ]
+          bonus: [ 89, 149, 237, 329, 499 ]
+          benefit:
+            - '&6« &6&lСКИДКА ДЛЯ БОНУСОВ 13%'
+            - '&6« &b&lВЫГОДА 17% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 8%'
+            - '&6« &9&lВЫГОДА 35%'
+            - '&6« &4&lВЫГОДА 45%'
+            - '&6« &6&lВЫГОДА 55%'
+            - '&6« &5&lВЫГОДА 68%'
+      red:
+        data: 14
+        slot: 24
+        prices:
+          anix: [ 39, 69, 109, 149, 239, 349 ]
+          bonus: [ 117, 199, 329, 449, 717 ]
+          benefit:
+            - '&6« &4&lСКИДКА ДЛЯ БОНУСОВ 8%'
+            - '&6« &b&lВЫГОДА 22%'
+            - '&6« &9&lВЫГОДА 41%'
+            - '&6« &4&lВЫГОДА 47%'
+            - '&6« &6&lВЫГОДА 63%'
+            - '&6« &5&lВЫГОДА 75%'
+      black:
+        data: 15
+        slot: 25
+        prices:
+          anix: [ 39, 69, 109, 149, 239, 349 ]
+          bonus: [ 117, 199, 329, 449, 717 ]
+          benefit:
+            - '&6« &5&lСКИДКА ДЛЯ БОНУСОВ 15%'
+            - '&6« &b&lВЫГОДА 25% &4&l+ &4&lСКИДКА ДЛЯ БОНУСОВ 10%'
+            - '&6« &9&lВЫГОДА 37%'
+            - '&6« &4&lВЫГОДА 50%'
+            - '&6« &6&lВЫГОДА 65%'
+            - '&6« &5&lВЫГОДА 75%'
+    hover-text: '&f&lКупить цвет'
+  color-black-list:
+    title: '&8Черный список цветов'
+    size: 45
+    filler-items:
+      white:
+        material: STAINED_GLASS_PANE
+        data: 15
+        slots: [ 0, 8, 9, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 35, 36, 44 ]
+    explainer:
+      player-skull-id: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0='
+      slot: 22
+      name: '&6 Информация'
+      lore:
+        - '&c&l ▲ Заблокированные цвета ▲'
+        - '&7&l ПКМ чтобы перемещать цвета между списками'
+        - '&a&l ▼ Показывающиеся  цвета ▼'
+    blocked-color-slots: [ 1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 15, 16 ]
+    allowed-color-slots: [ 28, 29, 30, 31, 32, 33, 34, 37, 38, 39, 40, 41, 42, 43 ]
+    move-to-blocked-list-hover-message: '&6Поместить цвет в черный список &f(ПКМ)'
+    move-to-allowed-list-hover-message: '&6Поместить цвет в белый список &f(ПКМ)'
+    cant-move-to-blocked-list-all-colors: '&cНужно оставить минимум 1 цвет'
+  pickaxe-customization:
+    title: '&7Выбор кирок'
+    size: 27
+    filler-items:
+      black:
+        material: STAINED_GLASS_PANE
+        data: 15
+        slots: [ 1, 9, 10, 18, 19, 27 ]
+      yellow:
+        material: STAINED_GLASS_PANE
+        data: 4
+        slots: [ 2, 8, 11, 17, 20, 26 ]
+      orange:
+        material: STAINED_GLASS_PANE
+        data: 1
+        slots: [ 3, 4, 5, 6, 7, 21, 22, 23, 24, 25 ]
+    items:
+      wooden-pickaxe:
+        material: WOOD_PICKAXE
+        slot: 12
+        prices:
+          anix: [ 35, 59, 89, 129, 179, 249 ]
+          bonus: [ 89, 177, 269, 429, 629 ]
+          benefit:
+            - ''
+            - '&6« &b&lВЫГОДА 17%'
+            - '&6« &9&lВЫГОДА 37%'
+            - '&6« &4&lВЫГОДА 40%'
+            - '&6« &6&lВЫГОДА 57%'
+            - '&6« &5&lВЫГОДА 70%'
+      stone-pickaxe:
+        material: STONE_PICKAXE
+        slot: 13
+        prices:
+          anix: [ 19, 29, 49, 59, 89, 149 ]
+          bonus: [ 49, 79, 149, 189, 329 ]
+          benefit:
+            - ''
+            - '&6« &b&lВЫГОДА 25%'
+            - '&6« &9&lВЫГОДА 37%'
+            - '&6« &4&lВЫГОДА 50%'
+            - '&6« &6&lВЫГОДА 61%'
+            - '&6« &5&lВЫГОДА 67%'
+      iron-pickaxe:
+        material: IRON_PICKAXE
+        slot: 14
+        prices:
+          anix: [ 25, 39, 59, 79, 129, 189 ]
+          bonus: [ 69, 117, 189, 269, 439 ]
+          benefit:
+            - ''
+            - '&6« &b&lВЫГОДА 22%'
+            - '&6« &9&lВЫГОДА 41%'
+            - '&6« &4&lВЫГОДА 50%'
+            - '&6« &6&lВЫГОДА 57%'
+            - '&6« &5&lВЫГОДА 69%'
+      diamond-pickaxe:
+        material: DIAMOND_PICKAXE
+        name: '&b&lну хз, купи)'
+        slot: 15
+        prices:
+          anix: [ 19, 29, 49, 59, 89, 149 ]
+          bonus: [ 49, 79, 149, 189, 329 ]
+          benefit:
+            - ''
+            - '&6« &b&lВЫГОДА 17%'
+            - '&6« &9&lВЫГОДА 37%'
+            - '&6« &4&lВЫГОДА 40%'
+            - '&6« &6&lВЫГОДА 57%'
+            - '&6« &5&lВЫГОДА 70%'
+      gold-pickaxe:
+        material: GOLD_PICKAXE
+        slot: 16
+        prices:
+          anix: [ 35, 59, 89, 129, 179, 249 ]
+          bonus: [ 89, 177, 269, 429, 629 ]
+          benefit:
+            - ''
+            - '&6« &b&lВЫГОДА 17%'
+            - '&6« &9&lВЫГОДА 37%'
+            - '&6« &4&lВЫГОДА 40%'
+            - '&6« &6&lВЫГОДА 57%'
+            - '&6« &5&lВЫГОДА 70%'

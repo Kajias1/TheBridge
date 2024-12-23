@@ -1,0 +1,55 @@
+hot-bar-items:
+  arena-configuration:
+    material: PAPER
+    slot: 1
+    name: '&6&lНастройка арены'
+  region-selection-wand:
+    material: BLAZE_ROD
+    slot: 2
+    name: '&6&lВыделение привата'
+  fast-start:
+    material: WATCH
+    slot: 5
+    name: '&6&lНачать игру'
+  fast-join-any-arena:
+    material: BLAZE_POWDER
+    slot: 5
+    name: '&6&lБыстрый старт'
+  team-select:
+    material: STAINED_CLAY
+    slot: 1
+    name: '&6&lВыбрать команду'
+  leave-game:
+    material: BARRIER
+    slot: 9
+    name: '&6&lПокинуть игру'
+  new-game:
+    material: PAPER
+    slot: 1
+    name: '&a&lНовая игра'
+  bonus-shop:
+    material: CHEST
+    slot: 9
+    name: '&6&lМагазин бонусов'
+  arena-select:
+    material: STAINED_CLAY
+    slot: 1
+    name: '&6&lВыбрать арену'
+  lightning-stick:
+    material: BLAZE_ROD
+    name: '&e&lКЧАУ'
+    lore:
+      - ''
+      - '&e&lСпециальный гаджет, вызывающий'
+      - '&e&lмолнию после удара по врагу.'
+      - '&e&lВыдаётся после забитого гола'
+      - ''
+    slot: 6
+  time-back:
+    material: WATCH
+    name: '&e&lВремя вспять'
+    slot: 7
+  teleport-to-base:
+    material: EYE_OF_ENDER
+    name: '&5&lТелепорт на базу'
+    slot: 8
